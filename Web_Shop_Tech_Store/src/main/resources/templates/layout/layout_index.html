@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:fragment="h24sneaker_index(view)">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>H24 SNEAKER</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/styles/bootstrap4/bootstrap.min.css}">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+	integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/plugins/OwlCarousel2-2.2.1/owl.carousel.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/plugins/OwlCarousel2-2.2.1/owl.theme.default.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/plugins/OwlCarousel2-2.2.1/animate.css}">
+<!-- <link rel="stylesheet" type="text/css" th:href="@{/styles/login.css}"> -->
+<link rel="stylesheet" type="text/css"
+	th:href="@{/styles/main_styles.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/styles/responsive.css}">
+	<link rel="stylesheet" type="text/css"
+	th:href="@{/styles/login.css}">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+</head>
+
+<body ng-app="shopping-cart-app" ng-controller="shopping-cart-ctrl">
+	<div class="super_container">
+
+		<!-- header & top -->
+		<div th:replace="~{/layout/_menu.html}"></div>
+
+		<!-- main -->
+		<main th:replace="${view}"></main>
+
+		<!-- Footer -->
+		<div th:replace="~{/layout/_footer.html}"></div>
+
+		<!-- end page -->
+
+		<script th:src="@{/js/jquery-3.2.1.min.js}"></script>
+		<script th:src="@{/styles/bootstrap4/popper.js}"></script>
+		<script th:src="@{/styles/bootstrap4/bootstrap.min.js}"></script>
+		<script th:src="@{/plugins/Isotope/isotope.pkgd.min.js}"></script>
+		<script th:src="@{/plugins/OwlCarousel2-2.2.1/owl.carousel.js}"></script>
+		<script th:src="@{/plugins/easing/easing.js}"></script>
+		<script th:src="@{/js/custom.js}"></script>
+		<script th:src="@{/js/shopping-cart-app.js}"></script>
+	</div>
+	
+</body>
+
+</html>

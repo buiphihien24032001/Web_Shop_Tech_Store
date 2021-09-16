@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org"
+	th:replace="~{/layout/layout_orderdetail.html::h24sneaker_orderdetail(~{::body})}">
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<div class="container2">
+			<div class="row">
+				<div class="col-12">
+					<div class="card">
+						<div class="card-body text-center">
+							<h3 class="card-title m-b-0">Đơn hàng của bạn</h3>
+						</div>
+
+						<div class="table-responsive">
+							<table class="table">
+								<thead class="thead-light">
+									<tr>
+										<th scope="col-2"></th>
+										<th scope="col-2">STT</th>
+										<th scope="col-1">Mã đơn hàng</th>
+										<th scope="col-2">Ngày đặt hàng</th>
+										<th scope="col-4">Địa chỉ nhận hàng</th>
+										<th scope="col-1"></th>
+									</tr>
+								</thead>
+								<tbody class="customtable">
+									<tr th:each="order,state: ${orders}" >
+										<td></td>
+										<td>[[${state.index}]]</td>
+										<td>[[${order.id}]]</td>
+										<td>[[${order.create_date}]]</td>
+										<td>[[${order.address}]]</td>
+										<td>
+											<a th:href="@{|/order/detail/${order.id}|}" class="btn btn-info"> <b class="fa fa-search"></b> </a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

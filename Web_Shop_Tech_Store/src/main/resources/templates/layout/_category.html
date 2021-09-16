@@ -1,0 +1,39 @@
+<div class="sidebar">
+	<div class="sidebar_section">
+		<div class="sidebar_title">
+			<h5>Danh mục</h5>
+		</div>
+		<ul class="sidebar_categories">
+			<li class="active"><a th:href="@{/product/list}"><span><i
+						class="fa fa-angle-double-right" aria-hidden="true"></i></span>Tất cả</a></li>
+						
+						
+			<li th:each="c:${cates}"><a th:href="@{|/product/list?cid=${c.id}|}">[[${c.name}]]</a></li>
+			
+			<!-- <li><a th:href="@{/product/list?cid=2}">Adidas</a></li>
+			<li><a th:href="@{/product/list?cid=3}">Puma</a></li>
+			<li><a th:href="@{/product/list?cid=4}">Vans</a></li>
+			<li><a th:href="@{/product/list?cid=5}">Converse</a></li>
+			<li><a th:href="@{/product/list?cid=6}">Balenciaga</a></li>
+			<li><a th:href="@{/product/list?cid=7}">MC Queen</a></li>
+			<li><a th:href="@{/product/list?cid=8}">Boots</a></li>
+			<li><a th:href="@{/product/list?cid=9}">Gucci</a></li>
+			<li><a th:href="@{/product/list?cid=10}">New Balance</a></li> -->
+		</ul>
+	</div>
+  
+	<!-- Price Range Filtering -->
+	<div class="sidebar_section">
+		<div class="sidebar_title">
+			<h5>Giá sản phẩm</h5>
+		</div>
+		<p>
+			<input type="text" id="amount" readonly
+				style="border: 0; color: #f6931f; font-weight: bold;">
+		</p>
+		<div id="slider-range"></div>
+		<div class="filter_button">
+			<span>Lọc</span>
+		</div>
+	</div>
+</div>

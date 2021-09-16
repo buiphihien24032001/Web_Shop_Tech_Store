@@ -1,0 +1,11 @@
+<!-- cart info -->
+<ul class="navbar_user">
+	<li><a th:href="@{/}"><i class="fa fa-search"
+			aria-hidden="true"></i></a></li>
+	<li><a th:href="@{/}"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+	<li class="checkout"><a th:href="@{/cart/view}"> <i
+			class="fa fa-shopping-cart" aria-hidden="true"></i> <span
+			id="checkout_items" class="checkout_items">{{cart.count}}</span>
+	</a></li>
+	<li>  = ${{cart.amount|number:1}}</li>
+</ul>
